@@ -28,19 +28,23 @@ public class FlightBookingTest {
 
         //wait for the auto complete options to appear for the origin
 
-        waitFor(2000);
+        waitFor(10000); //increased the wait time from 2 seconds to 6 seconds such that the city name populates properly
         List<WebElement> originOptions = driver.findElement(By.id("ui-id-1")).findElements(By.tagName("li"));
         originOptions.get(0).click();
+        
+        waitFor(6000); //adding wait
 
-        driver.findElement(By.id("toTag")).clear();
-        driver.findElement(By.id("toTag")).sendKeys("Delhi");
+        driver.findElement(By.id("ToTag")).clear();                 //toTag to ToTag
+        driver.findElement(By.id("ToTag")).sendKeys("Delhi");       //toTag to ToTag
 
         //wait for the auto complete options to appear for the destination
 
-        waitFor(2000);
+        waitFor(6000); //increased the wait time from 2 seconds to 4 seconds such that the city name populates properly
         //select the first item from the destination auto complete list
         List<WebElement> destinationOptions = driver.findElement(By.id("ui-id-2")).findElements(By.tagName("li"));
         destinationOptions.get(0).click();
+        
+        waitFor(6000); //adding wait
 
         driver.findElement(By.xpath("//*[@id='ui-datepicker-div']/div[1]/table/tbody/tr[3]/td[7]/a")).click();
 

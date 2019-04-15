@@ -19,7 +19,16 @@ public class SignInTest {
 
         driver.findElement(By.linkText("Your trips")).click();
         driver.findElement(By.id("SignIn")).click();
-
+        
+        //Adding sleep such that the frame loads properly
+        waitFor(4000);
+        
+        //Switching to the frame that loads after the SignIn click
+        driver.switchTo().frame("modal_window");
+        
+        //Adding sleep such that the frame loads properly
+        waitFor(2000);
+        
         driver.findElement(By.id("signInButton")).click();
 
         String errors1 = driver.findElement(By.id("errors1")).getText();
