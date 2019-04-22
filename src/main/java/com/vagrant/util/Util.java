@@ -1,10 +1,10 @@
-package com.vagrant.test;
+package com.vagrant.util;
 
 import com.sun.javafx.PlatformUtil;
 
 public class Util {
 	
-    protected void setDriverPath() {
+    public void setDriverPath() {
         if (PlatformUtil.isMac()) {
             System.setProperty("webdriver.chrome.driver", "chromedriver");
         }
@@ -16,7 +16,7 @@ public class Util {
         }
     }
     
-    protected void waitFor(int durationInMilliSeconds) {
+    public void waitFor(int durationInMilliSeconds) {
         try {
             Thread.sleep(durationInMilliSeconds);
         } catch (InterruptedException e) {

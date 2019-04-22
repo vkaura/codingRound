@@ -1,6 +1,6 @@
 //Creating a HotelBookingPage with different Web Elements
 
-package com.vagrant.test;
+package com.vagrant.page;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -21,10 +21,10 @@ public class HotelBookingPage {
     
     //Adding WebElements for check-in and check-out day using xpath
     
-    @FindBy(xpath = "//*[@id='ui-datepicker-div']/div[1]/table/tbody/tr[3]/td[7]/a")
+    @FindBy(xpath = "//*[@id='ui-datepicker-div']/div[2]/table/tbody/tr[1]/td[7]/a")
     private WebElement checkInDateSelection;
     
-    @FindBy(xpath = "//*[@id='ui-datepicker-div']/div[1]/table/tbody/tr[4]/td[1]/a")
+    @FindBy(xpath = "//*[@id='ui-datepicker-div']/div[2]/table/tbody/tr[2]/td[1]/a")
     private WebElement checkOutDateSelection;
     
     //Adding getters for the different WebElements of the hotel booking page

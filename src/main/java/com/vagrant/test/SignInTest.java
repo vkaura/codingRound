@@ -7,6 +7,8 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import com.vagrant.util.Util;
+
 public class SignInTest {
 
     WebDriver driver = new ChromeDriver();

@@ -1,0 +1,17 @@
+Code Review Comments
+
+1. Created relevant package names for the test classes, pages and utils as supposed to the default package.
+
+2. Added a testng.xml and configured the test classes for the same in order to run the tests as a single suite and               configured the same in the pom.xml as the default suite file in order to execute the tests as a part of the maven build.
+
+3. Added Util.java:w class to hold the methods setDriverPath() and waitFor() that are being called at different times during the test execution.
+
+4. SignInTest.java - Fixed the test failure by adding code to switch the frame after the Sign In click and added appropriate waits in order for a seamless test execution.
+
+5. FlightBookingTest.java - Fixed the test failure by correcting the element from "toTag" to "ToTag" and added appropriate waits in order for a seamless test execution.
+
+6. HotelBookingPage.java - Added a class for the HotelBookingTest holding the different WebElements using the @FindBy annotation for the Page object model with appropriate getter methods, used to test the scenario of hotel search.
+
+7. HotelBookingTest.java - Fixed the test failure by utilizing the WebElements (check-in date, check-out date etc.) from the HotelBookingPage and added an assert to verify the search summary
+
+8. To run the tests, navigate to the path to the codingRound on the local and execute: mvn clean install

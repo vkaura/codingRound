@@ -12,6 +12,9 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import com.vagrant.page.HotelBookingPage;
+import com.vagrant.util.Util;
+
 public class HotelBookingTest {
 	
 	WebDriver driver = new ChromeDriver();
